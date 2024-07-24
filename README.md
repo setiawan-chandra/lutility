@@ -11,7 +11,7 @@ Add git source repository to `composer.json`:
 "repositories": [
     {
         "type": "vcs",
-        "url": "https://github.com/djgroup88/lutility.git"
+        "url": "https://github.com/setiawan-chandra/lutility.git"
     }
 ],
 "minimum-stability": "dev",
