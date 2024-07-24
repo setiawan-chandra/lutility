@@ -1,0 +1,72 @@
+{
+    "name": "kastanaz/lutility",
+    "description": "This is my package lutility",
+    "keywords": [
+        "kastanaz",
+        "laravel",
+        "lutility"
+    ],
+    "homepage": "https://github.com/kastanaz/lutility",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kastanaz",
+            "email": "ahmatarnal@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "masbug/flysystem-google-drive-ext": "^2.2",
+        "spatie/laravel-package-tools": "^1.14.0",
+        "illuminate/contracts": "^10.0 || ^11.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.9",
+        "nunomaduro/larastan": "^2.0.1",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-arch": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kastanaz\\Lutility\\": "src",
+            "Kastanaz\\Lutility\\Database\\Factories\\": "database/factories"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kastanaz\\Lutility\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kastanaz\\Lutility\\LutilityServiceProvider"
+            ],
+            "aliases": {
+                "Lutility": "Kastanaz\\Lutility\\Facades\\Lutility"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
