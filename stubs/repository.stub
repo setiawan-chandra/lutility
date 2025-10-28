@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Repositories;
+
+use Kastanaz\Lutility\Repositories\BaseRepository;
+use App\Contracts\Repositories\DummyClassContract;
+
+class DummyClass extends BaseRepository implements DummyClassContract
+{
+    public function __construct()
+    {
+        //
+    }
+}
